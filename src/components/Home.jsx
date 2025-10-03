@@ -1,10 +1,54 @@
-import React from 'react';
+import React from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4">歡迎來到解謎小遊戲</h1>
-      <p className="text-lg text-gray-600">點擊開始遊戲吧！</p>
+    <div className="container py-5">
+      <div className="d-flex flex-wrap justify-content-center align-items-center gap-3">
+        {/* 卡片 A */}
+        <Card style={{ width: "12rem" }} className="text-center">
+          <Card.Body>
+            <Card.Title>題目 A</Card.Title>
+            <Card.Text>（尚未解開）</Card.Text>
+            <Button variant="primary">進入 A</Button>
+          </Card.Body>
+        </Card>
+
+        {/* 卡片 B */}
+        <Card style={{ width: "12rem" }} className="text-center">
+          <Card.Body>
+            <Card.Title>題目 B</Card.Title>
+            <Card.Text>（尚未解開）</Card.Text>
+            <Button variant="primary">進入 B</Button>
+          </Card.Body>
+        </Card>
+
+        {/* 中間按鈕 */}
+        <Button variant="success" size="lg">
+          最終解答
+        </Button>
+
+        {/* 卡片 C */}
+        <Card style={{ width: "12rem" }} className="text-center">
+          <Card.Body>
+            <Card.Title>題目 C</Card.Title>
+            <Card.Text>（尚未解開）</Card.Text>
+            <Button variant="primary">進入 C</Button>
+          </Card.Body>
+        </Card>
+
+        {/* 卡片 D */}
+        <Card style={{ width: "12rem" }} className="text-center">
+          <Card.Body>
+            <Card.Title>題目 D</Card.Title>
+            <Card.Text>（尚未解開）</Card.Text>
+            <Button variant="primary">進入 D</Button>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
-}
+};
+
+
+export default Home;
