@@ -34,7 +34,7 @@ function App() {
             fontWeight: 'bold'
           }}>
             {currentPage === 'home' && '現在正是解謎的時刻！'}
-            {currentPage === 'A' && '題目 A'}
+            {currentPage === 'A' && '中文造詣'}
             {currentPage === 'B' && '題目 B'}
             {currentPage === 'C' && '題目 C'}
             {currentPage === 'D' && '題目 D'}

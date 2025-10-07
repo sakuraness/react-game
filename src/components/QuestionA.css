@@ -1,0 +1,62 @@
+.question-card {
+  width: 80vw;
+  min-height: 70vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+
+/* 容器：兩排並排 */
+.question-columns {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* 兩排間距，可調 */
+}
+
+/* 每一欄（直排文字 + input）統一定寬並置中 */
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 水平置中直排文字與 input */
+  width: 120px;          /* <- 這裡統一寬度，調整到你想要的數值 */
+  box-sizing: border-box;
+}
+
+/* 直排文字 */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 28px;
+  line-height: 2.8;
+  letter-spacing: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center; /* 把文字在欄內水平置中 */
+  align-items: center;
+  width: 100%;
+}
+
+/* 輸入框撐滿欄位寬度 */
+.answer-input {
+  width: 80px;       /* 正方形寬度 */
+  height: 80px;      /* 正方形高度 */
+  text-align: center; /* 文字置中 */
+  box-sizing: border-box; /* 包含 padding/border，不影響寬高 */
+  font-size: 24px;    /* 文字大小可調 */
+  padding: 0;         /* 移除內部預設 padding，讓文字置中 */
+}
+
+/* 下排按鈕 */
+.button-group {
+  display: flex;
+  justify-content: center;  /* 整體水平置中 */
+  gap: 20px;                /* 按鈕間距，可調整 */
+  margin-top: 20px;         /* 可選：按鈕和上方內容的距離 */
+}
