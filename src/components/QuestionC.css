@@ -1,0 +1,57 @@
+.question-card {
+  width: 80vw;
+  min-height: 70vh;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.matrix-row {
+  display: flex;
+  gap: 10px; /* 每行內格子間距 */
+  margin-bottom: 15px; /* 每行上下間距 */
+}
+
+.matrix-letter {
+  width: 60px;          /* 調整格子寬度 */
+  height: 60px;         /* 調整格子高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: bold;    /* 加粗字體 */
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #000;
+}
+
+/* 每行背景色不同 */
+.matrix-row:nth-child(1) .matrix-letter { background-color: #ffe0e0; }
+.matrix-row:nth-child(2) .matrix-letter { background-color: #e0ffe0; }
+.matrix-row:nth-child(3) .matrix-letter { background-color: #e0e0ff; }
+.matrix-row:nth-child(4) .matrix-letter { background-color: #fff0e0; }
+.matrix-row:nth-child(5) .matrix-letter { background-color: #f0ffff; }
+
+.matrix-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+/* 下排按鈕 */
+.button-group {
+  display: flex;
+  justify-content: center;  /* 整體水平置中 */
+  gap: 20px;                /* 按鈕間距，可調整 */
+  margin-top: 20px;         /* 可選：按鈕和上方內容的距離 */
+}

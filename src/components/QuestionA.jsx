@@ -28,12 +28,12 @@ function QuestionA({ onBack, onSubmit }) {
           {/* 題目內容區 */}
           <div className="question-columns">
             <div className="column">
-              <div className="vertical-text">天地人心愛誠和</div>
+              <div className="vertical-text">十目增一開八腳</div>
               <Form.Control className="answer-input" placeholder="答" />
             </div>
 
             <div className="column">
-              <div className="vertical-text">山水火風雲雷光</div>
+              <div className="vertical-text">左答削頭去一橫</div>
               <Form.Control className="answer-input" placeholder="答" />
             </div>
           </div>
