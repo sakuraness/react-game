@@ -35,9 +35,9 @@ function App() {
           }}>
             {currentPage === 'home' && '現在正是解謎的時刻！'}
             {currentPage === 'A' && '中文造詣'}
-            {currentPage === 'B' && '題目 B'}
-            {currentPage === 'C' && '題目 C'}
-            {currentPage === 'D' && '題目 D'}
+            {currentPage === 'B' && '數學理解'}
+            {currentPage === 'C' && '英文程度'}
+            {currentPage === 'D' && '生物知識'}
           </div>
 
           {/* 右邊玩家名稱 */}

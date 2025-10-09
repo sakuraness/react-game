@@ -1,0 +1,54 @@
+.question-card {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f6f7;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 45px);
+  grid-template-rows: repeat(7, 45px);
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.grid-cell {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.grid-cell.clicked {
+  background-color: rgb(53, 53, 53);
+  color: rgb(87, 87, 87);
+}
+
+.grid-cell:hover {
+  transform: scale(1.05);
+  background-color: rgb(230, 232, 255);
+}
+
+.grid-cell.clicked:hover {
+  background-color: #444;
+  color: #3b6fff;
+  transform: scale(1.05);
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
