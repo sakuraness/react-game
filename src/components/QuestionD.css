@@ -1,0 +1,77 @@
+.question-card {
+  text-align: center;
+  width: max-content;  /* ✅ 自動依 grid 寬度調整 */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f6f7;
+}
+
+/* ✅ 格子區（4×4） */
+.grid-container-d {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-template-rows: repeat(4, 60px);
+  justify-content: center;
+  margin: 20px auto;
+  gap: 0;
+  width: 480px;
+}
+
+.grid-cell-d {
+  width: 120px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, transform 0.2s;
+  overflow: hidden;
+}
+
+.grid-cell-d:hover {
+  background-color: rgba(100, 180, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* ✅ 提示文字顯示與淡出效果 */
+.hint-text {
+  font-size: 18px;
+  color: #004f7a;
+  background-color: rgba(242, 215, 172, 0.7);
+  border-radius: 8px;
+  padding: 4px 12px;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.answer-area {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.answer-input {
+  width: 120px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/react-game/static/js/main.0842d33b.js",
+    "main.css": "/react-game/static/css/main.bc0981af.css",
+    "main.js": "/react-game/static/js/main.02f79475.js",
+    "static/media/chineseBG.jpg": "/react-game/static/media/chineseBG.e130fe6bb975cbaa3ebe.jpg",
+    "static/media/englishBG.jpg": "/react-game/static/media/englishBG.ea4e405fad392b43480a.jpg",
     "index.html": "/react-game/index.html",
-    "main.0842d33b.js.map": "/react-game/static/js/main.0842d33b.js.map"
+    "main.bc0981af.css.map": "/react-game/static/css/main.bc0981af.css.map",
+    "main.02f79475.js.map": "/react-game/static/js/main.02f79475.js.map"
   },
   "entrypoints": [
-    "static/js/main.0842d33b.js"
+    "static/css/main.bc0981af.css",
+    "static/js/main.02f79475.js"
   ]
 }
