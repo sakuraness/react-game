@@ -39,7 +39,7 @@
 .hint-text {
   font-size: 18px;
   color: #004f7a;
-  background-color: rgba(242, 215, 172, 0.7);
+  background-color: rgba(100, 180, 255, 0.7);
   border-radius: 8px;
   padding: 4px 12px;
   animation: fadeOut 3s ease-in-out forwards;

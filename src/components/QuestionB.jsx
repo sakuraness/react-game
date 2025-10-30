@@ -1,7 +1,7 @@
 import React , { useState } from 'react';
 import { Card, Button, Modal } from "react-bootstrap";
 import "./QuestionB.css";
-import bgC from "../images/englishBG.jpg";
+import bgC from "../images/mathBG.jpg";
 
 function QuestionB({ onBack, onSubmit }) {
   const gridSize = 7;
@@ -10,24 +10,24 @@ function QuestionB({ onBack, onSubmit }) {
 
   // ✅ 你可自行在此填寫每個格子的數字
   const numbers = [
-    [12, 18, 47, 89, 73, 30, 40],
-    [9, 5, 8, 66, 10, 29, 21],
-    [2, 15, 33, 27, 50, 99, 25],
-    [3, 20, 44, 97, 23, 31, 67],
-    [79, 4, 26, 11, 45, 28, 7],
-    [48, 71, 14, 24, 32, 41, 82],
-    [58, 88, 13, 83, 17, 39, 92],
+    [12, 67, 15, 88, 73, 30, 40],
+    [9, 5, 8, 66, 29, 10, 21],
+    [20, 47, 33, 71, 41, 99, 25],
+    [44, 2, 23, 76, 3, 35, 18],
+    [70, 4, 26, 45, 11, 28, 77],
+    [48, 27, 14, 24, 32, 50, 82],
+    [58, 89, 13, 83, 17, 39, 92],
   ];
 
   // ✅ 正確答案圖案（你提供的 G 形）
   const solution = [
-    [0,0,1,1,1,0,0],
-    [0,1,0,0,0,1,0],
-    [1,0,0,0,0,0,0],
-    [1,0,0,1,1,1,1],
-    [1,0,0,1,0,0,1],
-    [0,1,0,0,0,1,0],
-    [0,0,1,1,1,0,0],
+    [0,1,0,0,1,0,0],
+    [0,1,0,0,1,0,0],
+    [0,1,0,1,1,0,0],
+    [0,1,1,0,1,0,0],
+    [0,0,0,0,1,0,0],
+    [0,0,0,0,0,0,0],
+    [0,1,1,1,1,0,0],
   ];
 
   // 點擊狀態
@@ -79,8 +79,12 @@ function QuestionB({ onBack, onSubmit }) {
     >
       <Card className="question-card">
         <Card.Body>
+          <div className="hint-box">
+            「因數是距離解謎最遙遠的因素。」
+          </div>
+          
           <Card.Title style={{ textAlign: "center", marginBottom: "20px" }}>
-            題目 B
+            找出那些 "特立獨行" 的數字並標註起來，如此一來答案就會浮現。
           </Card.Title>
 
           <div className="grid-container">
@@ -112,10 +116,10 @@ function QuestionB({ onBack, onSubmit }) {
         </Modal.Header>
         <Modal.Body>
           <p>恭喜，你答對了！</p>
-          <p>正確答案就是 G，用中文記做「雞」！</p>
+          <p>正確答案就是「ㄐㄧ」，可用中文記做「基」！</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={() => onSubmit('八')}>
+          <Button variant="primary" onClick={() => onSubmit('基')}>
             回首頁
           </Button>
         </Modal.Footer>

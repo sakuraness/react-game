@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card, Button, Modal, Form } from "react-bootstrap";
 import "./QuestionD.css";
-import bgC from "../images/englishBG.jpg";
+import bgC from "../images/biologyBG.jpg";
 
 function QuestionD({ onBack, onSubmit }) {
   const gridSize = 4;
@@ -54,8 +54,12 @@ function QuestionD({ onBack, onSubmit }) {
     >
       <Card className="question-card">
         <Card.Body>
+          <div className="hint-box">
+            「想要答案嗎？想要的話就送給你吧！自己去找吧，我把線索都埋藏在那裡了。」
+          </div>
+          
           <Card.Title style={{ textAlign: "center", marginBottom: "20px" }}>
-            題目 D
+            根據找到的線索猜出一種生物，答案只有一個字。
           </Card.Title>
 
           <div className="grid-container-d">

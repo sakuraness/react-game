@@ -6,6 +6,18 @@
   background-color: #f9f6f7;
 }
 
+.hint-box {
+  background-color: rgba(112, 112, 112, 0.8);
+  border-left: 5px solid rgb(107, 107, 107);
+  border-right: 5px solid rgb(107, 107, 107);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-style: italic;
+  color: white;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(7, 45px);

@@ -21,8 +21,12 @@ function QuestionA({ onBack, onSubmit }) {
 
       <Card className="question-card">
         <Card.Body>
+          <div className="hint-box">
+            「那一天，老師終於回想起了，曾經批改字音字形考卷的恐怖。」
+          </div>
+
           <Card.Title style={{ textAlign: "center", marginBottom: "20px" }}>
-            題目 A
+            請直向閱讀文字，每一行答案各有一字，最後兩字終能合二為一。
           </Card.Title>
 
           {/* 題目內容區 */}
@@ -43,7 +47,7 @@ function QuestionA({ onBack, onSubmit }) {
         <div className="button-group">
           <Button onClick={onBack}>返回主畫面</Button>
           <Button>提示</Button>
-          <Button onClick={() => onSubmit('答A')}>送出答案</Button>
+          <Button onClick={() => onSubmit('顛')}>送出答案</Button>
         </div>
       </Card>
     </div>

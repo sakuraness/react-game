@@ -55,8 +55,12 @@ function QuestionC({ onBack, onSubmit }) {
     >
       <Card className="question-card">
         <Card.Body>
+          <div className="hint-box">
+            「重要的單字表缺了一部份，被遺忘的字母將會被重新地拼湊。」
+          </div>
+          
           <Card.Title style={{ textAlign: "center", marginBottom: "20px" }}>
-            題目 C
+            將每橫列單字缺失的字母補齊，便能得到拼湊出的謎底。
           </Card.Title>
 
           <div>
