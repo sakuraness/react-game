@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/react-game/static/css/main.bc0981af.css",
-    "main.js": "/react-game/static/js/main.02f79475.js",
+    "main.css": "/react-game/static/css/main.439f670c.css",
+    "main.js": "/react-game/static/js/main.06a1caf0.js",
     "static/media/chineseBG.jpg": "/react-game/static/media/chineseBG.e130fe6bb975cbaa3ebe.jpg",
+    "static/media/mathBG.jpg": "/react-game/static/media/mathBG.a882285a2250db121627.jpg",
     "static/media/englishBG.jpg": "/react-game/static/media/englishBG.ea4e405fad392b43480a.jpg",
+    "static/media/biologyBG.jpg": "/react-game/static/media/biologyBG.de7941038d0e474c2286.jpg",
     "index.html": "/react-game/index.html",
-    "main.bc0981af.css.map": "/react-game/static/css/main.bc0981af.css.map",
-    "main.02f79475.js.map": "/react-game/static/js/main.02f79475.js.map"
+    "main.439f670c.css.map": "/react-game/static/css/main.439f670c.css.map",
+    "main.06a1caf0.js.map": "/react-game/static/js/main.06a1caf0.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc0981af.css",
-    "static/js/main.02f79475.js"
+    "static/css/main.439f670c.css",
+    "static/js/main.06a1caf0.js"
   ]
 }
