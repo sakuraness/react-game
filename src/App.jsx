@@ -12,10 +12,23 @@ import QuestionD from './components/QuestionD';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
+  const [allCleared, setAllCleared] = useState(false);
+
 
   const handleAnswer = (qKey, value) => {
-    setAnswers(prev => ({ ...prev, [qKey]: value }));
-    setCurrentPage('home'); // 回到首頁
+    setAnswers(prev => {
+      const newAnswers = { ...prev, [qKey]: value };
+
+      const isAllCleared = Object.values(newAnswers).every(v => v !== null);
+
+      if (isAllCleared) {
+        setAllCleared(true);
+      }
+
+      return newAnswers;
+    });
+
+    setCurrentPage('home');
   };
 
   return (
@@ -50,7 +63,8 @@ function App() {
       {currentPage === 'home' && (
         <Home 
           answers={answers} 
-          onSelectQuestion={(q)=>setCurrentPage(q)} 
+          onSelectQuestion={(q)=>setCurrentPage(q)}
+          allCleared ={allCleared}
         />
       )}
       {currentPage === 'A' && (
