@@ -8,8 +8,8 @@ function Home({answers, onSelectQuestion, allCleared}) {
       {allCleared && (
         <div className="mb-4">
           {/* 隱藏關卡 */}
-          <Card className="text-center">
-            <Card.Body>
+          <Card className="text-center" >
+            <Card.Body >
               <Card.Title>Well Done!</Card.Title>
               <Card.Text>
                 恭喜你已完成各科的題目，也取得了最終解答的線索。
@@ -17,7 +17,7 @@ function Home({answers, onSelectQuestion, allCleared}) {
               <Card.Text>
                 欸呀，看來這些線索遺失了重要的東西。進入隱藏關卡，找回那些重要的東西吧！
               </Card.Text>
-              <Button variant="success" size="lg">
+              <Button variant="success" size="lg" onClick={()=>onSelectQuestion('X')}>
                 前往最終解答
               </Button>
             </Card.Body>

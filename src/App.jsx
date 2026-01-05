@@ -8,11 +8,13 @@ import QuestionA from './components/QuestionA';
 import QuestionB from './components/QuestionB';
 import QuestionC from './components/QuestionC';
 import QuestionD from './components/QuestionD';
+import QuestionX from './components/QuestionX';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
-  const [allCleared, setAllCleared] = useState(false);
+  const [allCleared, setAllCleared] = useState(true); // TEST MODE: should be false
+  const [isXCleared, setXCleared] = useState(false);
 
 
   const handleAnswer = (qKey, value) => {
@@ -28,6 +30,12 @@ function App() {
       return newAnswers;
     });
 
+    setCurrentPage('home');
+  };
+
+  const handleFinalAnswer = () => {
+    
+    setXCleared(true);
     setCurrentPage('home');
   };
 
@@ -51,6 +59,7 @@ function App() {
             {currentPage === 'B' && '數學理解'}
             {currentPage === 'C' && '英文程度'}
             {currentPage === 'D' && '生物知識'}
+            {currentPage === 'X' && '隱藏之聲'}
           </div>
 
           {/* 右邊玩家名稱 */}
@@ -65,6 +74,7 @@ function App() {
           answers={answers} 
           onSelectQuestion={(q)=>setCurrentPage(q)}
           allCleared ={allCleared}
+          isXCleared = {isXCleared}
         />
       )}
       {currentPage === 'A' && (
@@ -88,6 +98,12 @@ function App() {
       {currentPage === 'D' && (
         <QuestionD 
           onSubmit={(val)=>handleAnswer('D', val)}
+          onBack={()=>setCurrentPage('home')}
+        />
+      )}
+      {currentPage === 'X' && (
+        <QuestionX 
+          onSubmit={()=>handleFinalAnswer()}
           onBack={()=>setCurrentPage('home')}
         />
       )}
