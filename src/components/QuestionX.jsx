@@ -141,6 +141,9 @@ function QuestionX({ onBack, onSubmit }) {
 
           {/* ===== 底部輸入區 ===== */}
           <div className="questionX-inputBar">
+            <Button variant="secondary" onClick={onBack}>
+              返回主畫面
+            </Button>
             {inputs.map((v, i) => (
               <Form.Control
                 key={i}
@@ -155,9 +158,6 @@ function QuestionX({ onBack, onSubmit }) {
 
             <Button onClick={handleSubmit} disabled={locked}>
               提交
-            </Button>
-            <Button variant="secondary" onClick={onBack}>
-              返回主畫面
             </Button>
           </div>
         </Card.Body>

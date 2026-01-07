@@ -12,8 +12,8 @@
 
 /* ===== Card ===== */
 .questionX-card {
-  position: relative;   /* 關鍵 */
-  height: 88vh;
+  position: relative;
+  height: 84vh;
   width: 90%;
   max-width: 900px;
 }

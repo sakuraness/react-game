@@ -1,0 +1,48 @@
+.current-answer-box {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.answer-wrapper {
+  position: relative;      /* 給 hint 當定位基準 */
+  display: inline-block;
+}
+
+.current-answer {
+  --size: clamp(64px, 8vw, 128px);
+
+  width: var(--size);
+  height: var(--size);
+
+  font-size: calc(var(--size) * 0.5);
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #bcd8ff;
+  font-weight: bold;
+}
+
+.current-answer-hint {
+  position: absolute;
+
+  left: 80%;        /* 🔑 從方塊右側開始 */
+  top: 70%;          /* 🔑 垂直偏下 */
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 1;
+  font-weight: bold;
+
+  background-color: #ffe874;
+  color: #000;
+}
