@@ -9,6 +9,7 @@ import QuestionB from './components/QuestionB';
 import QuestionC from './components/QuestionC';
 import QuestionD from './components/QuestionD';
 import QuestionX from './components/QuestionX';
+import ClearPage from './components/ClearPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -60,6 +61,7 @@ function App() {
             {currentPage === 'C' && '英文程度'}
             {currentPage === 'D' && '生物知識'}
             {currentPage === 'X' && '隱藏之聲'}
+            {currentPage === 'clear' && '偶咩得多'}
           </div>
 
           {/* 右邊玩家名稱 */}
@@ -106,6 +108,9 @@ function App() {
           onSubmit={()=>handleFinalAnswer()}
           onBack={()=>setCurrentPage('home')}
         />
+      )}
+      {currentPage === 'clear' && (
+        <ClearPage/>
       )}
     </>
   );

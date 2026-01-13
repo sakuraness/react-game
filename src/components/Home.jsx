@@ -1,8 +1,52 @@
 import React from "react";
 import "./Home.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { useState, useRef } from "react";
+
+const CLICK_INTERVAL_MS = 3000; // 3 秒，之後只改這裡
+const REQUIRED_CLICKS = 8;
 
 function Home({answers, onSelectQuestion, allCleared, isXCleared}) {
+
+  const [clickCount, setClickCount] = useState(0);
+
+  const clearTimerRef = useRef(null); // 判斷「是否通關」
+  const idleResetTimerRef = useRef(null); // 判斷是否「歸零」
+
+  const handleFinalClick = () => {
+    if (!allCleared) return;
+
+    const now = Date.now();
+
+    // 判斷通關倒數正在進行，若有代表「第 9 下」
+    if (clearTimerRef.current) {
+      clearTimeout(clearTimerRef.current);
+      clearTimerRef.current = null;
+    }
+
+    // 刷新「歸零」倒數
+    if (idleResetTimerRef.current) {
+      clearTimeout(idleResetTimerRef.current);
+    }
+
+    idleResetTimerRef.current = setTimeout(() => {
+      setClickCount(0);
+    }, CLICK_INTERVAL_MS);
+
+    let nextCount = clickCount + 1;
+    setClickCount(nextCount);
+
+    // 是否剛好到 8 下
+    if (nextCount === REQUIRED_CLICKS) {
+      clearTimerRef.current = setTimeout(() => {
+        onSelectQuestion("clear");
+      }, CLICK_INTERVAL_MS);
+    }
+  };
+
+
+
+
   return (
     <div className="container py-5">
       {/* ===== 隱藏關卡 ===== */}
@@ -83,8 +127,8 @@ function Home({answers, onSelectQuestion, allCleared, isXCleared}) {
         </Card>
 
         {/* 中間按鈕 */}
-        <Button variant="success" size="lg">
-          O
+        <Button className="finalBtn" onClick={handleFinalClick}>
+          {clickCount}
         </Button>
 
         {/* 卡片 C */}
