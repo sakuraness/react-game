@@ -1,0 +1,85 @@
+/* ========== Card Square ========== */
+.ui-card--square {
+  background-color: rgba(255, 255, 255, 0.8); /* 80% 透明白 */
+  color: var(--color-text-main);
+
+  border: 1px solid var(--color-border);
+  border-radius: 0; /* 方形 */
+  box-shadow: var(--shadow-sm);
+
+  padding: 16px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* ========== Button Base ========== */
+.ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Disabled */
+.ui-btn:disabled,
+.ui-btn--disabled {
+  background-color: var(--color-disabled);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ========== Primary Button Square ========== */
+.ui-btn--primary-square {
+  background-color: var(--color-primary-deep);
+  color: var(--color-btn-text-inverse);
+
+  border: 2px solid var(--color-primary-border);
+  border-radius: 0;  /* 方形 */
+
+  height: var(--btn-height);
+  padding: 0 var(--btn-padding-x);
+
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Hover */
+.ui-btn--primary-square:hover {
+  background-color: #1e3a8a; /* 深一點的 hover 色 */
+}
+
+/* Active */
+.ui-btn--primary-square:active {
+  background-color: #1e3a8a;
+}
+
+/* Disabled */
+.ui-btn--primary-square:disabled {
+  background-color: var(--color-disabled);
+  border-color: var(--color-disabled);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+}

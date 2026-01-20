@@ -1,0 +1,43 @@
+/* ========== Color Tokens ========== */
+:root {
+  /* Brand */
+  --color-primary-deep: #2c4bb0;     /* 中間深藍 */
+  --color-primary-border: #c7d2fe;   /* 淺藍邊框 */
+  --color-btn-text-inverse: #ffffff; /* 文字白色 */
+
+  /* Surface */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+
+  /* Border & Shadow */
+  --color-border: #c2d3f4;
+
+  /* Text */
+  --color-text-main: #111827;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  /* State */
+  --color-disabled: #d1d5db;
+}
+
+/* ========== Radius Tokens ========== */
+:root {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+}
+
+/* ========== Shadow Tokens ========== */
+:root {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== Button Tokens ========== */
+:root {
+  --btn-height: 36px;
+  --btn-padding-x: 32px;
+  --btn-font-size: 14px;
+  --btn-font-weight: 500;
+}
