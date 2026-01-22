@@ -95,7 +95,7 @@ function Home({ answers, onSelectQuestion, allCleared, isXCleared }) {
 
         <div className="d-flex flex-wrap justify-content-center align-items-center gap-3">
           {/* 卡片 A */}
-          <Card style={{ width: "12rem" }} className="text-center ui-card--square">
+          <Card style={{ width: "12rem" }} className="text-center ui-card ui-card--orange">
             <Card.Body>
               <Card.Title>中文造詣</Card.Title>
               <Card.Text className="current-answer-box">
@@ -114,7 +114,7 @@ function Home({ answers, onSelectQuestion, allCleared, isXCleared }) {
           </Card>
 
           {/* 卡片 B */}
-          <Card style={{ width: "12rem" }} className="text-center ui-card--square">
+          <Card style={{ width: "12rem" }} className="text-center ui-card ui-card--green">
             <Card.Body>
               <Card.Title>數學理解</Card.Title>
               <Card.Text>
@@ -138,7 +138,7 @@ function Home({ answers, onSelectQuestion, allCleared, isXCleared }) {
           </Button>
 
           {/* 卡片 C */}
-          <Card style={{ width: "12rem" }} className="text-center ui-card--square">
+          <Card style={{ width: "12rem" }} className="text-center ui-card ui-card--red">
             <Card.Body>
               <Card.Title>英文程度</Card.Title>
               <Card.Text>
@@ -157,7 +157,7 @@ function Home({ answers, onSelectQuestion, allCleared, isXCleared }) {
           </Card>
 
           {/* 卡片 D */}
-          <Card style={{ width: "12rem" }} className="text-center ui-card--square">
+          <Card style={{ width: "12rem" }} className="text-center ui-card ui-card--blue">
             <Card.Body>
               <Card.Title>生物知識</Card.Title>
               <Card.Text>

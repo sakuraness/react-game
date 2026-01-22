@@ -19,7 +19,7 @@ function QuestionA({ onBack, onSubmit }) {
       }}
     >
 
-      <Card className="question-card">
+      <Card className="question-card ui-card ui-card--orange">
         <Card.Body>
           <div className="hint-box">
             「那一天，老師終於回想起了，曾經批改字音字形考卷的恐怖。」
@@ -45,9 +45,9 @@ function QuestionA({ onBack, onSubmit }) {
 
         {/* ✅ 返回主畫面按鈕 */}
         <div className="button-group">
-          <Button onClick={onBack}>返回主畫面</Button>
-          <Button>提示</Button>
-          <Button onClick={() => onSubmit('顛')}>送出答案</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={onBack}>返回主畫面</Button>
+          <Button className="ui-btn ui-btn--primary-square">提示</Button>
+          <Button  className="ui-btn ui-btn--primary-square" onClick={() => onSubmit('顛')}>送出答案</Button>
         </div>
       </Card>
     </div>

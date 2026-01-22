@@ -77,7 +77,7 @@ function QuestionB({ onBack, onSubmit }) {
         paddingTop: "8vh",
       }}
     >
-      <Card className="question-card">
+      <Card className="question-card ui-card ui-card--green">
         <Card.Body>
           <div className="hint-box">
             「因數是距離解謎最遙遠的因素。」
@@ -103,9 +103,9 @@ function QuestionB({ onBack, onSubmit }) {
         </Card.Body>
 
         <div className="button-group">
-          <Button onClick={onBack}>返回主畫面</Button>
-          <Button>提示</Button>
-          <Button onClick={handleSubmit}>送出答案</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={onBack}>返回主畫面</Button>
+          <Button className="ui-btn ui-btn--primary-square">提示</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={handleSubmit}>送出答案</Button>
         </div>
       </Card>
 

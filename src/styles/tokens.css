@@ -1,9 +1,12 @@
 /* ========== Color Tokens ========== */
 :root {
   /* Brand */
-  --color-primary-deep: #2c4bb0;     /* 中間深藍 */
-  --color-primary-border: #c7d2fe;   /* 淺藍邊框 */
+  --color-primary-deep: #3b3b3b;     /* 中間深藍 */
+  --color-primary-border: #c8c8c8;   /* 淺藍邊框 */
   --color-btn-text-inverse: #ffffff; /* 文字白色 */
+
+  --color-primary-deep-hover: #636363;
+  --color-primary-border-hover: #e2e2e2;
 
   /* Surface */
   --color-surface: #ffffff;
@@ -40,4 +43,29 @@
   --btn-padding-x: 32px;
   --btn-font-size: 14px;
   --btn-font-weight: 500;
+}
+
+/* ========== Card Theme Tokens ========== */
+:root {
+  /* Red */
+  --card-red-bg: rgb(198, 112, 112, var(--card-opacity));
+  --card-red-border: #fca5a5;
+
+  /* Orange */
+  --card-orange-bg: rgba(235, 122, 62, var(--card-opacity));
+  --card-orange-border: #fdba74;
+
+  /* Yellow */
+  --card-yellow-bg: rgba(238, 208, 38, var(--card-opacity));
+  --card-yellow-border: #fde68a;
+
+  /* Green */
+  --card-green-bg: rgb(82, 188, 121, var(--card-opacity));
+  --card-green-border: #86efac;
+
+  /* Blue */
+  --card-blue-bg: rgba(74, 124, 233, var(--card-opacity));
+  --card-blue-border: #93c5fd;
+
+   --card-opacity: 0.9; /* 統一調整所有 Card 背景透明度 */
 }

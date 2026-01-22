@@ -52,7 +52,7 @@ function QuestionD({ onBack, onSubmit }) {
         paddingTop: "8vh",
       }}
     >
-      <Card className="question-card">
+      <Card className="question-card ui-card ui-card--blue">
         <Card.Body>
           <div className="hint-box">
             「想要答案嗎？想要的話就送給你吧！自己去找吧，我把線索都埋藏在那裡了。」
@@ -89,8 +89,8 @@ function QuestionD({ onBack, onSubmit }) {
         </Card.Body>
 
         <div className="button-group">
-          <Button onClick={onBack}>返回主畫面</Button>
-          <Button onClick={handleSubmit}>送出答案</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={onBack}>返回主畫面</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={handleSubmit}>送出答案</Button>
         </div>
       </Card>
 

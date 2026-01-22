@@ -1,10 +1,10 @@
-.question-card {
+/* .question-card {
   text-align: center;
-  width: max-content;  /* ✅ 自動依 grid 寬度調整 */
+  width: max-content;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f6f7;
-}
+} */
 
 /* ✅ 格子區（4×4） */
 .grid-container-d {
