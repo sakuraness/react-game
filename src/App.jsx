@@ -17,7 +17,7 @@ import ClearPage from './components/ClearPage';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
-  const [allCleared, setAllCleared] = useState(false); // TEST MODE: should be false
+  const [allCleared, setAllCleared] = useState(true); // TEST MODE: should be false
   const [isXCleared, setXCleared] = useState(false);
 
 

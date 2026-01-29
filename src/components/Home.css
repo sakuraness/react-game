@@ -5,6 +5,12 @@
   background-size: 500px 500px;
 }
 
+.cards-wrapper {
+  width: calc(12rem * 4 + 4rem + 5 * 1rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .current-answer-box {
   display: flex;
   align-items: end;

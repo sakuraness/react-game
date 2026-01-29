@@ -56,7 +56,7 @@
   --card-orange-border: #fdba74;
 
   /* Yellow */
-  --card-yellow-bg: rgba(238, 208, 38, var(--card-opacity));
+  --card-yellow-bg: rgba(217, 185, 0, var(--card-opacity));
   --card-yellow-border: #fde68a;
 
   /* Green */

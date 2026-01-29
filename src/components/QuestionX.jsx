@@ -93,18 +93,18 @@ function QuestionX({ onBack, onSubmit }) {
       className="questionX-wrapper"
       style={{ backgroundImage: `url(${bgA})` }}
     >
-      <Card className="questionX-card">
+      <Card className="questionX-card ui-card ui-card--yellow">
         <Card.Body className="questionX-body">
           {/* ===== 上方說明區 ===== */}
           <div className="questionX-header">
             <div className="hint-box">
-              「他知道，只要順序錯了，一切都會重來。」
+              「如果是解謎高手的話，一定也會玩猜數字的」
             </div>
 
             <Card.Title className="questionX-title">
               1A2B：請猜出不重複的 4 位數字，為答案補上的最後的拼圖。
             </Card.Title>
-            <Button onClick={handle1A2BRule}>
+            <Button className="ui-btn ui-btn--primary-square" onClick={handle1A2BRule}>
               1A2B規則
             </Button>
           </div>
@@ -141,7 +141,7 @@ function QuestionX({ onBack, onSubmit }) {
 
           {/* ===== 底部輸入區 ===== */}
           <div className="questionX-inputBar">
-            <Button variant="secondary" onClick={onBack}>
+            <Button className="ui-btn ui-btn--primary-square" onClick={onBack}>
               返回主畫面
             </Button>
             {inputs.map((v, i) => (
@@ -156,7 +156,7 @@ function QuestionX({ onBack, onSubmit }) {
               />
             ))}
 
-            <Button onClick={handleSubmit} disabled={locked}>
+            <Button className="ui-btn ui-btn--primary-square" onClick={handleSubmit} disabled={locked}>
               提交
             </Button>
           </div>
@@ -170,7 +170,7 @@ function QuestionX({ onBack, onSubmit }) {
         </Modal.Header>
         <Modal.Body>{errorMsg}</Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => setShowError(false)}>確認</Button>
+          <Button className="ui-btn ui-btn--primary-square" onClick={() => setShowError(false)}>確認</Button>
         </Modal.Footer>
       </Modal>
 
@@ -181,7 +181,7 @@ function QuestionX({ onBack, onSubmit }) {
         </Modal.Header>
         <Modal.Body>你已成功破解正確答案。</Modal.Body>
         <Modal.Footer>
-          <Button onClick={handleSuccessBack}>
+          <Button className="ui-btn ui-btn--primary-square" onClick={handleSuccessBack}>
             返回 HOME
           </Button>
         </Modal.Footer>
