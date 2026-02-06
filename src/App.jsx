@@ -13,9 +13,10 @@ import QuestionC from './components/QuestionC';
 import QuestionD from './components/QuestionD';
 import QuestionX from './components/QuestionX';
 import ClearPage from './components/ClearPage';
+import StartPage from './components/StartPage';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('startPage');
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
   const [allCleared, setAllCleared] = useState(true); // TEST MODE: should be false
   const [isXCleared, setXCleared] = useState(false);
@@ -58,6 +59,7 @@ function App() {
             transform: 'translateX(-50%)',
             fontWeight: 'bold'
           }}>
+            {currentPage === 'startPage' && '現在正是解謎的時刻！'}
             {currentPage === 'home' && '現在正是解謎的時刻！'}
             {currentPage === 'A' && '中文造詣'}
             {currentPage === 'B' && '數學理解'}
@@ -74,6 +76,11 @@ function App() {
         </Container>
       </Navbar>
 
+      {currentPage === 'startPage' && (
+        <StartPage 
+          
+        />
+      )}
       {currentPage === 'home' && (
         <Home 
           answers={answers} 

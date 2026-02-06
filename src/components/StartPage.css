@@ -1,0 +1,66 @@
+/* ===============================
+   Button base
+   =============================== */
+
+.glow-btn {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  background: #0f0f0f;
+  color: #eaeaea;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.glow-btn:hover {
+  background: #444444;
+  color: #eaeaea;
+}
+
+.glow-btn:active {
+  background: #a3ceff;
+  color: #444444;
+}
+
+
+/* ===============================
+   SVG overlay
+   =============================== */
+
+.border-svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+/* ===============================
+   Meteor particle (core)
+   =============================== */
+
+.border-svg rect {
+  fill: none;
+  stroke: #a3ceff;
+  stroke-width: 2;
+
+  stroke-dasharray: 0.08 0.92;
+  stroke-dashoffset: 0;
+
+  stroke-linecap: square;
+
+  animation: meteorLoop 3.2s linear infinite;
+}
+
+/* ===============================
+   Constant-speed loop
+   =============================== */
+
+@keyframes meteorLoop {
+  to {
+    stroke-dashoffset: -1;
+  }
+}
