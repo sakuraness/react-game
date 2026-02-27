@@ -20,8 +20,13 @@ function App() {
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
   const [allCleared, setAllCleared] = useState(true); // TEST MODE: should be false
   const [isXCleared, setXCleared] = useState(false);
+  const [playerName, setPlayerName] = useState("");
 
-
+  const handleStartSubmit = (name) => {
+    setPlayerName(name);
+    setCurrentPage("home");
+  };
+  
   const handleAnswer = (qKey, value) => {
     setAnswers(prev => {
       const newAnswers = { ...prev, [qKey]: value };
@@ -71,15 +76,14 @@ function App() {
 
           {/* 右邊玩家名稱 */}
           <Navbar.Text className="ms-auto">
-            玩家：playerX
+            挑戰者：{playerName || "playerX"}
           </Navbar.Text>
+
         </Container>
       </Navbar>
 
-      {currentPage === 'startPage' && (
-        <StartPage 
-          
-        />
+      {currentPage === "startPage" && (
+        <StartPage onSubmit={handleStartSubmit} />
       )}
       {currentPage === 'home' && (
         <Home 

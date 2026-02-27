@@ -1,3 +1,22 @@
+.question-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 水平置中 */
+  text-align: center;    /* 文字置中 */
+}
+
+.question-card-body {
+  width: 100%;
+  align-items: center;   /* 水平置中 */
+  text-align: center;    /* 文字置中 */
+}
+
+.hint-box {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===============================
    Button base
    =============================== */
@@ -14,6 +33,10 @@
   font-size: 18px;
   letter-spacing: 1px;
   overflow: hidden;
+  text-align: center;
+  display: block;
+  margin: 12px auto 0;
+  margin-top: 50px;
 }
 
 .glow-btn:hover {
@@ -63,4 +86,65 @@
   to {
     stroke-dashoffset: -1;
   }
+}
+
+/* 讓整個輸入區塊置中，寬度 = card 的一半 */
+.name-form-wrap {
+  width: 50%;
+  min-width: 150px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+/* 輸入框容器 */
+.name-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* 輸入框本體 */
+.name-input {
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0);
+  color: #eaf6ff;
+  caret-color: transparent; /* 隱藏原生游標 */
+  border-radius: 0;
+}
+
+.name-input:focus {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);      
+  color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 178, 122, 0.18);
+}
+
+.name-input-wrapper {
+  position: relative;
+}
+
+/* 中間閃爍方塊 */
+.center-blink-caret {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  background: #ffd2ad;
+  animation: centerBlink 0.9s steps(1) infinite;
+  pointer-events: none;
+}
+
+@keyframes centerBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+
+.name-error {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #6a45fc;
 }
