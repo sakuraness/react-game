@@ -47,6 +47,12 @@
   border-color: var(--card-green-border);
 }
 
+/* Gray */
+.ui-card--gray {
+  background-color: var(--card-gray-bg);
+  border-color: var(--card-gray-border);
+}
+
 /* Blue */
 .ui-card--blue {
   background-color: var(--card-blue-bg);

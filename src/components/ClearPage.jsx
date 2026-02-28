@@ -1,17 +1,25 @@
 import React from 'react';
 import { Card } from "react-bootstrap";
 import "./ClearPage.css";
-import bg from "../images/bgStarSky.png";
+import bg from "../images/bgMainSky10.png";
 import imgCongrats from "../images/congrats.png";
 
 function ClearPage() {
   return (
     <div
-      className="clearpage-wrapper"
       style={{
         backgroundImage: `url(${bg})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "500px 500px",
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start", // 原本是 center
+        paddingTop: "8vh", // 控制上方距離，可調 5~10vh
       }}
     >
+    
       <Card className="clearpage-card">
         <Card.Body className="clearpage-card-body">
           <Card.Title className="clearpage-title">
@@ -22,7 +30,7 @@ function ClearPage() {
             src={imgCongrats}
             alt="congratulations"
             className="clearpage-image"
-          />
+           />
 
           <div className="clearpage-text">
             你成功完成了「點擊八下」的最終指令

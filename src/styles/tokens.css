@@ -67,5 +67,9 @@
   --card-blue-bg: rgba(74, 124, 233, var(--card-opacity));
   --card-blue-border: #93c5fd;
 
+  /* Gray */
+  --card-gray-bg: rgb(83, 83, 83, var(--card-opacity));
+  --card-gray-border: #d6d6d6;
+
    --card-opacity: 0.9; /* 統一調整所有 Card 背景透明度 */
 }

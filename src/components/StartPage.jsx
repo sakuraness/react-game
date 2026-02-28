@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Form } from "react-bootstrap";
 import "./StartPage.css";
-import bg from "../images/bgStarSky.png";
+import bg from "../images/bgMainSky10.png";
 
 function StartPage({ onSubmit }) {
 
@@ -15,7 +15,20 @@ function StartPage({ onSubmit }) {
     const name = (rawName ?? "").trim();
 
     if (!name) {
-      return { isValid: false, message: "請先輸入名稱" };
+      return { isValid: false, message: "ERROR：請輸入名稱" };
+    }
+
+    // 長度限制：2~20 字元
+    if (name.length < 2 || name.length > 20) {
+      return { isValid: false, message: "ERROR：名稱長度限制 2~20 字元" };
+    }
+
+    // 阻擋常見 JS / XSS 語法
+    const blockedJsPattern =
+      /<\s*\/?\s*script\b|javascript\s*:|on\w+\s*=|<\s*\/?\s*[a-z][^>]*>|=>|[{}()[\];`\\]/i;
+
+    if (blockedJsPattern.test(name)) {
+      return { isValid: false, message: "ERROR：名稱包含不允許的字元或語法" };
     }
 
     return { isValid: true, message: "" };
@@ -29,9 +42,17 @@ function StartPage({ onSubmit }) {
       return;
     }
 
+    const trimmedName = playerName.trim();
+    const isConfirmed = window.confirm(`核對：你是 ${trimmedName}？`);
+
+    if (!isConfirmed) {
+      return; // 使用者按取消就不送出
+    }
+
     setError("");
-    onSubmit(playerName.trim());
+    onSubmit(trimmedName);
   };
+
 
 
   return (
@@ -49,7 +70,7 @@ function StartPage({ onSubmit }) {
       }}
     >
 
-      <Card className="question-card ui-card ui-card--orange">
+      <Card className="question-card ui-card ui-card--gray">
         <Card.Body className="question-card-body">
           <div className="hint-box">
             「歡迎你，挑戰者」

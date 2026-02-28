@@ -5,6 +5,7 @@ import { Navbar, Container } from 'react-bootstrap';
 
 import './styles/tokens.css';
 import './styles/components.css';
+import './components/App.css';
 
 import Home from './components/Home';
 import QuestionA from './components/QuestionA';
@@ -18,7 +19,7 @@ import StartPage from './components/StartPage';
 function App() {
   const [currentPage, setCurrentPage] = useState('startPage');
   const [answers, setAnswers] = useState({ A: null, B: null, C: null, D: null });
-  const [allCleared, setAllCleared] = useState(true); // TEST MODE: should be false
+  const [allCleared, setAllCleared] = useState(false); // TEST MODE: should be false
   const [isXCleared, setXCleared] = useState(false);
   const [playerName, setPlayerName] = useState("");
 
@@ -52,10 +53,12 @@ function App() {
   return (
     <>
       {/* Navbar */}
-      <Navbar bg="light" expand="lg">
+      <Navbar className="metallic-bg" expand="lg">
         <Container className="justify-content-between" style={{width: '100%'}}>
-          {/* 左邊 Logo */}
-          <Navbar.Brand>Allen Magica</Navbar.Brand>
+          {/* 左邊 ID */}
+          <Navbar.Brand>
+            挑戰者：{playerName || "Unknown"}
+          </Navbar.Brand>
 
           {/* 中間頁面名稱 */}
           <div style={{

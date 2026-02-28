@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import bg from "../images/bgStarSky.png";
+import bg from "../images/bgMainSky10.png";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { useState, useRef } from "react";
 

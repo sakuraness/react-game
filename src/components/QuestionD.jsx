@@ -114,7 +114,7 @@ function QuestionD({ onBack, onSubmit }) {
         <Modal.Header closeButton>
           <Modal.Title>答錯了！</Modal.Title>
         </Modal.Header>
-        <Modal.Body>再想想看，也許提示還沒全看完喔！</Modal.Body>
+        <Modal.Body>再想想看，也許線索還沒全看完！</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShowWrongModal(false)}>
             關閉

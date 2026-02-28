@@ -116,7 +116,7 @@
 .name-input:focus {
   border: 2px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.2);      
-  color: #ffffff;
+  color: #e3e3e3;
   box-shadow: 0 0 0 2px rgba(255, 178, 122, 0.18);
 }
 
@@ -132,7 +132,7 @@
   width: 8px;
   height: 18px;
   transform: translate(-50%, -50%);
-  background: #ffd2ad;
+  background: #ffffff;
   animation: centerBlink 0.9s steps(1) infinite;
   pointer-events: none;
 }
@@ -146,5 +146,5 @@
 .name-error {
   margin-top: 8px;
   font-size: 18px;
-  color: #6a45fc;
+  color: #ff5f5f;
 }

@@ -1,0 +1,28 @@
+.metallic-bg {
+    /* 基本銀白色基底 */
+    background-color: #808080;
+
+    /* 組合漸層層次 */
+    background-image:
+        /* 第一層（頂層）：平滑的金屬掃描光澤漸層 */
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.5) 0%,
+            /* 亮部掃描 */
+            transparent 25%,
+            transparent 75%,
+            rgba(255, 255, 255, 0.5) 100%
+            /* 亮部掃描 */
+        ),
+        /* 第二層：微小的重複顆粒/噴砂紋理 */
+        repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.03),
+            rgba(0, 0, 0, 0.03) 2px,
+            transparent 1px,
+            transparent 2px),
+        /* 第三層：另一個角度的微小重複紋理，增加顆粒感 */
+        repeating-linear-gradient(-45deg,
+            rgba(0, 0, 0, 0.01),
+            rgba(0, 0, 0, 0.01) 2px,
+            transparent 1px,
+            transparent 2px);
+}

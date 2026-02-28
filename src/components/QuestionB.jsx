@@ -84,7 +84,7 @@ function QuestionB({ onBack, onSubmit }) {
           </div>
           
           <Card.Title style={{ textAlign: "center", marginBottom: "20px" }}>
-            找出那些 "特立獨行" 的數字並標註起來，如此一來答案就會浮現。
+            找出那些 "無法被拆解" 的數字並標註起來，如此一來答案就會浮現。
           </Card.Title>
 
           <div className="grid-container">
@@ -104,7 +104,6 @@ function QuestionB({ onBack, onSubmit }) {
 
         <div className="button-group">
           <Button className="ui-btn ui-btn--primary-square" onClick={onBack}>返回主畫面</Button>
-          <Button className="ui-btn ui-btn--primary-square">提示</Button>
           <Button className="ui-btn ui-btn--primary-square" onClick={handleSubmit}>送出答案</Button>
         </div>
       </Card>
