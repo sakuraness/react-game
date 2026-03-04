@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container } from 'react-bootstrap';
@@ -23,10 +23,38 @@ function App() {
   const [isXCleared, setXCleared] = useState(false);
   const [playerName, setPlayerName] = useState("");
 
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+
   const handleStartSubmit = (name) => {
     setPlayerName(name);
+    setElapsedSeconds(0);      // 重新開始時歸零
+    setIsTimerRunning(true);   // 開始計時
     setCurrentPage("home");
   };
+
+  const formatElapsedTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+  };
+
+  useEffect(() => {
+    if (!isTimerRunning) return;
+
+    const intervalId = setInterval(() => {
+      setElapsedSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [isTimerRunning]);
+
+  useEffect(() => {
+    if (currentPage === 'clear') {
+      setIsTimerRunning(false);
+    }
+  }, [currentPage]);
+
   
   const handleAnswer = (qKey, value) => {
     setAnswers(prev => {
@@ -77,9 +105,9 @@ function App() {
             {currentPage === 'clear' && '偶咩得多'}
           </div>
 
-          {/* 右邊玩家名稱 */}
+          {/* 右邊使用時數 */}
           <Navbar.Text className="ms-auto">
-            挑戰者：{playerName || "playerX"}
+            Time: {formatElapsedTime(elapsedSeconds)}
           </Navbar.Text>
 
         </Container>
@@ -127,7 +155,10 @@ function App() {
         />
       )}
       {currentPage === 'clear' && (
-        <ClearPage/>
+        <ClearPage
+          elapsedSeconds={elapsedSeconds}
+          playerName={playerName}
+        />
       )}
     </>
   );

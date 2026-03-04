@@ -35,16 +35,59 @@
   font-weight: 600;
 }
 
-/* 通關圖片 */
-.clearpage-image {
-  width: 50vw;        /* 佔畫面寬度 40% */
-  max-width: 480px;   /* 桌機上限，避免太大 */
-  min-width: 180px;   /* 行動裝置下限 */
-  height: auto;
-}
-
 /* 文字段落 */
 .clearpage-text {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.clear-playername {
+  text-align: center;
+  margin-top: 50px;
+  font-size: xx-large;
+}
+
+.clear-type-box {
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 14px 16px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid #111111; /* 黑框 */
+  border-radius: 0;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08) inset;
+  min-height: 132px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直置中 */
+  align-items: center;     /* 水平置中 */
+}
+
+.clear-type-line {
+  min-height: 1.7em;
+  color: #eaf6ff;
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  white-space: pre;
+}
+
+.clear-type-caret {
+  display: inline-block;
+  width: 8px;   /* 小方塊 */
+  height: 1.1em;
+  margin-left: 4px;
+  background: #ffffff;
+  vertical-align: text-bottom;
+  animation: clearBlink 0.9s steps(1) infinite;
+}
+
+@keyframes clearBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
