@@ -3,8 +3,52 @@ import { Card } from "react-bootstrap";
 import "./ClearPage.css";
 import bg from "../images/bgMainSky10.png";
 import imgCongrats from "../images/congrats.png";
+import FingerprintJS from '@fingerprintjs/fingerprintjs';
+
+async function getPlayerID() {
+  const fp = await FingerprintJS.load();
+  const result = await fp.get();
+  return result.visitorId;
+}
 
 function ClearPage({ elapsedSeconds, playerName }) {
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const sendClearLog = async () => {
+      try {
+        const player_id = await getPlayerID();
+
+        const payload = {
+          // TODO: 之後在這裡補你要寫進 Google Sheet 的欄位
+          player_id: player_id,
+          player_name: playerName || "Unknown",
+          clear_time:	new Date().toISOString(),
+          total_play_time: `${String(Math.floor(elapsedSeconds / 60)).padStart(2, "0")}:${String(elapsedSeconds % 60).padStart(2, "0")}`,
+          browser:	navigator.userAgent,
+          device:	/Mobi|Android/i.test(navigator.userAgent) ? "Mobile" : "Desktop",
+          game_version: "1.0"
+        };
+
+        await fetch(
+          "https://script.google.com/macros/s/AKfycbz6Dy1Wq-ImgoZes9hyfk1Xm_InA0TrKaEfk5OyDWEd-4c6LU6QzDUJq1WnVEiVApLW/exec",
+          {
+            method: "POST",
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+          }
+        );
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          console.error("Failed to send clear log:", error);
+        }
+      }
+    };
+
+    sendClearLog();
+
+    return () => controller.abort();
+  }, [elapsedSeconds, playerName]);
 
   const minutes = Math.floor(elapsedSeconds / 60);
   const seconds = elapsedSeconds % 60;
