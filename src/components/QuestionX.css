@@ -106,7 +106,7 @@
 
   padding: 5px 10px;
 
-  background-color: #bcd8ff;
+  background-color: #515151;
 
   display: flex;
   align-items: center;
@@ -122,6 +122,7 @@
   align-items: center;
   font-size: 20px;
   font-weight: bold;
+  color:darkblue;
   background: #fff;
 }
 
